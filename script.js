@@ -4,7 +4,7 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntaas = [
+const perguntas = [
     {
         enunciado:"Qual é o nado mais rápido?",
         alternativas: [
@@ -91,3 +91,15 @@ const perguntaas = [
 
     }
 ]
+
+let atual=0;
+let perguntaAtual;
+let historiaFinal="";
+let pontos=0;
+
+function mostraPergunta(){
+perguntaAtual=perguntas[atual];
+caixaPerguntas.textContent=perguntaAtual.enunciado;
+caixaAlternativas.textContent="";
+mostraAlternativas();
+}
